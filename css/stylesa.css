@@ -1,0 +1,235 @@
+/* Configuración del fondo general del body */
+body {
+  background-image: url(../img/fondomur.webp); /* Imagen de fondo */
+  background-color: black; /* Color de fondo de respaldo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-position: cover; /* Cobertura completa de la pantalla */
+  min-height: 100dvh; /* Altura mínima del viewport dinámico */
+  background-attachment: fixed; /* Fija el fondo al hacer scroll */
+  color: #fff; /* Color del texto en blanco */
+  font-family: 'Courier New', Courier, monospace; /* Establece la fuente */
+  display: grid; /* Uso de layout grid */
+  grid-template-rows: auto 1fr auto; /* Estructura de filas de la grid */
+}
+
+/* Superposición oscura en el fondo */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+  z-index: -1; /* Envía al fondo de la pila de capas */
+}
+
+/* Centra un div dentro de su contenedor */
+.divr {
+  margin: auto;
+}
+
+/* Configuración de una imagen personalizada */
+.custom-img {
+  width: 100%;
+  height: 37em; /* Altura específica */
+  object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+}
+
+/* Caja de contenido con fondo semitransparente */
+.content-box {
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  color: #ffffff; /* Texto en blanco */
+}
+
+/* Estilo para las etiquetas de un formulario */
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px; /* Posiciona la etiqueta encima del campo */
+  transition: 0.3s; /* Transición suave */
+  pointer-events: none; /* No interactúa con eventos de puntero */
+}
+
+/* Estilos de los inputs de formularios */
+.input {
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff; /* Texto en blanco */
+  font-size: 15px;
+  background-color: transparent; /* Fondo transparente */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(255, 255, 255, 0.4); /* Sombra */
+}
+
+/* Encabezado principal con estilo especial */
+h1 {
+  margin-bottom: 1em;
+  color: #ff0000; /* Color rojo */
+  font-family: 'Creepster', cursive; /* Fuente temática */
+  font-size: 3rem;
+}
+
+/* Estilo de párrafos */
+p {
+  font-size: 1.5rem;
+  font-family: 'MedievalSharp', cursive;
+  text-align: justify;
+}
+
+/* Estilos de los elementos de la barra de navegación */
+.navbar-brand, .nav-link {
+  font-size: 1.2rem;
+}
+
+/* Imagen de perfil o avatar */
+.foto {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Bordes redondeados para hacerla circular */
+}
+
+/* Estilo para las tarjetas */
+.card {
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  border: 2px solid rgba(255, 165, 0, 0.7); /* Borde anaranjado */
+  color: white;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+  position: relative;
+  transition: transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto visual en hover de las tarjetas */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1); /* Brillo sutil */
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover {
+  border-color: rgba(255, 165, 0, 1);
+  filter: brightness(1.1);
+  transform: translateY(-5px); /* Desplaza hacia arriba */
+  box-shadow: 0 12px 24px rgba(255, 0, 0, 0.7); /* Sombra más intensa */
+}
+
+.card:hover::before {
+  opacity: 1; /* Muestra el brillo en hover */
+}
+
+/* Estilo de los botones */
+.btn-outline-warning {
+  border-color: #ffcc00;
+  color: #ffcc00;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover para los botones */
+.btn-outline-warning:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Canvas para elementos gráficos */
+.canvas1 {
+  background-color: black;
+  border: 1px solid #ff0000;
+  width: 40em;
+  height: 30em;
+}
+
+.canvas2 {
+  background-color: black;
+  border: 1px solid red;
+  width: 1000px;
+  height: 300px;
+}
+
+/* Estilos para los elementos de juegos */
+#juegos, #juegos2 {
+  display: none;
+  margin-top: 2%;
+}
+
+/* Elemento oculto que aparece con transición */
+#suhtto {
+  opacity: 0;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s ease;
+}
+
+/* Banner en pantalla completa */
+.banner {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación de arañas */
+.spider, .spider2, .spider3 {
+  position: absolute;
+  animation: animateSpider 5s ease-in-out infinite;
+}
+
+/* Animación individual para arañas */
+.spider {
+  left: 15%;
+  top: -20%;
+  animation: animateSpider1 5s ease-in-out infinite;
+}
+
+@keyframes animateSpider1 {
+  0%, 100% { transform: translateY(-100px); }
+  50% { transform: translateY(0px); }
+}
+
+.spider2 {
+  left: 30%;
+  top: -45%;
+  animation: animateSpider2 15s ease-in-out infinite;
+}
+
+@keyframes animateSpider2 {
+  0%, 100% { transform: translateY(-200px); }
+  50% { transform: translateY(0px); }
+}
+
+.spider3 {
+  left: 70%;
+  top: -30%;
+  animation: animateSpider3 20s ease-in-out infinite;
+}
+
+@keyframes animateSpider3 {
+  0%, 100% { transform: translateY(-100px); }
+  50% { transform: translateY(0px); }
+}
