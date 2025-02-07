@@ -1,0 +1,6 @@
+[[redirects]]
+    from = "/"
+    to = "/php/login.php"
+    status = 301
+    force = false
+    
